@@ -1,5 +1,5 @@
 const pageLanding = (req, res) => {
-  res.render('index.html')
+  res.render('home.html')
 }
 
 const pageMail = (req, res) => {
