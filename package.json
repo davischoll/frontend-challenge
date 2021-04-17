@@ -1,0 +1,21 @@
+{
+  "name": "frontend-dev-challenge-linx",
+  "version": "1.0.0",
+  "description": "Frontend Developer Challenge",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davischoll/frontend-dev-challenge-linx.git"
+  },
+  "author": "Davi Scholl",
+  "license": "MIT",
+  "homepage": "https://github.com/davischoll/frontend-dev-challenge-linx#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.3"
+  }
+}
