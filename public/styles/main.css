@@ -3,8 +3,6 @@
   --color-background-title: #707070;
   --color-text-title: #FFFFFF;
   --color-text-base: #888888;
-
-  font-size: 60%;
 }
 
 * {
@@ -29,17 +27,14 @@ body,
 input,
 button,
 textarea {
-  font: 500 1.6rem 'Helvetica Neue';
-  color: var(--color-text-base);
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 #container {
-  width: 90vw;
-  max-width: 700px;
+  width: 100%;
+  max-width: 980px;
 }
 
-@media (min-width: 700px) {
-  :root {
-    font-size: 62.5%;
-  }
+a {
+  text-decoration: none;
 }

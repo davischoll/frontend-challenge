@@ -1,0 +1,134 @@
+.page-header {
+  height: 397.89px;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  height: 397.89px;
+
+  background-color: var(--color-background-title);
+
+  transform-origin: top right;
+  transform: skewY(16.4deg);
+}
+
+.page-header .header-content {
+  width: 100%;
+  position: relative;
+}
+
+.page-header .header-content .header-title {
+  margin: 66px 16px 0 16px;
+  color: var(--color-text-title);
+  opacity: 1;
+  text-align: left;
+}
+
+.page-header .header-content .header-title p:first-child {
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.page-header .header-content .header-title strong {
+  font-size: 40px;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.page-header .header-content .header-title p:last-child {
+  margin-top: 9px;
+  max-width: 360px;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.page-header .header-content .main-menu {
+  margin-top: 56px;
+  
+  width: auto;
+  height: auto;
+
+  display: grid;
+  grid-template-columns: 160px 160px;
+  grid-template-rows: 40px 40px;
+  gap: 20px;
+
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header .header-content .main-menu .main-menu-item {
+  height: 40px;
+  width: 160px;
+
+  background-color: var(--color-background-base);
+  color: var(--color-text-base);
+  box-shadow: 0px 1px 6px #00000029;
+
+  border: 1px solid var(--color-background-title);
+  border-radius: 4px;
+
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 700px) {
+  .page-header {
+    height: 399px;
+  }
+
+  .header-bg {
+    transform: skewY(10.4deg);
+  }
+
+  .page-header .header-content .header-title {
+    margin: 69px 0 0 0;
+    text-align: center;
+  }
+
+  .page-header .header-content .header-title p:last-child {
+    margin-top: 24px;
+    max-width: 100%;
+    font-style: normal;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .header-bg {
+    height: 399px;
+    transform: skewY(5deg);
+  }
+
+  .page-header .header-content {
+    max-width: 980px;
+    margin: 0 auto;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .page-header .header-content .main-menu {
+    display: grid;
+    grid-template-columns: 160px 160px 160px 160px;
+    grid-template-rows: 40px;
+    gap: 60px;
+  }
+}
