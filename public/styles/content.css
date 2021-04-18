@@ -1,0 +1,276 @@
+.main-content .description {
+  padding: 0 16px 0 16px;
+  width: auto;
+  color: var(--color-text-base);
+}
+
+.main-content .description h1 {
+  margin-bottom: 25px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.main-content .description p {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.main-content .description-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content .description-form fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 16px;
+}
+
+.main-content .description-form fieldset input {
+  height: 30px;
+  border: 1px solid var(--color-background-title);
+  padding: 5px;
+}
+
+.main-content .description-form fieldset label {
+  margin-bottom: 5px;
+}
+
+.main-content .description-form fieldset .input-block {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--color-text-base);
+}
+
+.main-content .description-form fieldset .input-gender {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.main-content .description-form fieldset .input-gender .input-gender-item {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.main-content .description-form fieldset .input-gender .input-gender-item label {
+  margin: 0 50px 0 0;
+  padding-left: 5px;
+}
+
+.main-content .description-form fieldset button {
+  color: var(--color-text-base);
+  font-size: 16px;
+  width: 100%;
+  height: 39px;
+  border: 1px solid var(--color-background-title);
+  border-radius: 4px;
+  background: var(--color-background-base);
+}
+
+.separation-line {
+  border-top: 1px solid var(--color-background-title);
+  max-width: 920px;
+  padding: 0 16px 0 16px;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 0 0;
+}
+
+.separation-line span {
+  position: relative;
+  top: -12px;
+  padding: 0 15px;
+  background: var(--color-background-base);
+  color: var(--color-text-base);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.section-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-list {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  width: 100%;
+}
+
+.product-list .product-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
+  color: var(--color-text-base);
+}
+
+.product-list .product-item img {
+  width: 169px;
+  height: 129px;
+}
+
+.product-list .product-item .product-item-name{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 14px;
+}
+
+.product-list .product-item .product-item-price{
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.product-list .product-item .product-item-price-bigger{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.product-list .product-item .product-item-buy-button {
+  display: flex;
+  border: 1px solid var(--color-background-title);
+  border-radius: 4px;
+  background: var(--color-background-base);
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.product-list .product-item .product-item-description {
+  display: none;
+}
+
+
+@media (min-width: 700px) {
+  .main-content {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-content .description {
+    max-width: 100%;
+    width: 60%;
+    padding-right: 40px;
+    padding-left: 16px;
+  }
+
+  .main-content .description h1 {
+    font-size: 22px;
+  }
+
+  .main-content .description p {
+    font-size: 14px;
+  }
+
+  .main-content .description-form {
+    width: 40%;
+  }
+
+  .main-content .description-form fieldset .input-block {
+    font-size: 14px;
+  }
+
+  .separation-line span {
+    font-size: 18px;
+  }
+
+  .product-list {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .product-list .product-item .product-item-buy-button {
+    width: 170px;
+  }
+}
+
+@media (min-width: 769px) {
+  .main-content .description {
+    padding-left: 0;
+  }
+
+  .separation-line {
+    margin: 60px 0 10px 25px;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .product-list .product-item {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .product-list .product-item img {
+    width: 200px;
+    height: 150px;
+  }
+
+  .product-list .product-item .product-item-name{
+    font-size: 16px;
+    margin: 10px 0 14px 0;
+  }
+
+  .product-list .product-item .product-item-price{
+    font-size: 14px;
+  }
+
+  .product-list .product-item .product-item-price-bigger{
+    font-size: 16px;
+  }
+
+  .product-list .product-item .product-item-buy-button {
+    width: 200px;
+  }
+
+  .product-list .product-item .product-item-description {
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 14px;
+  }
+}

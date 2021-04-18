@@ -2,9 +2,3 @@
   width: 100vw;
   height: 100vh;
 }
-
-@media (min-width: 700px) {
-  #page-home #container {
-    max-width: 100%;
-  }
-}
