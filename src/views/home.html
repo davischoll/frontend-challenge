@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="/styles/header.css">
   <link rel="stylesheet" href="/styles/content.css">
   <link rel="stylesheet" href="/styles/footer.css">
+
+  <script src="/scripts/add-products.js" defer></script>
 </head>
 
 <body id="page-home">
@@ -102,104 +104,25 @@
       <section class="section-products">
 
         <div class="product-list">
+
+          {% for product in products %}
+
           <li class="product-item">
-            <img src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6875461" alt="Product Number 0">
+            <img src="{{product.image}}" alt="{{product.name}}">
             <div>
-              <h3 class="product-item-name">Product Number 0</h3>
-              <p class="product-item-description">Product long description number 0 just to make more than one like of text.</p>
-              <p class="product-item-price">De: R$417,00</p>
-              <p class="product-item-price-bigger">Por: R$375,00</p>
-              <p class="product-item-price">ou 10x de R$37,50</p>
+              <h3 class="product-item-name">{{product.name}}</h3>
+              <p class="product-item-description">{{product.description}}</p>
+              <p class="product-item-price">De: R${{product.oldPrice}}</p>
+              <p class="product-item-price-bigger">Por: R${{product.price}}</p>
+              <p class="product-item-price">ou {{product.installments.count}}x de R${{product.installments.value}}</p>
               <a href="#" class="product-item-buy-button">Comprar</a>
             </div>
           </li>
 
-          <li class="product-item">
-            <img src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="Product Number 0">
-            <div>
-              <h3 class="product-item-name">Product Number 2</h3>
-              <p class="product-item-description">Product long description number 0 just to make more than one like of text.</p>
-              <p class="product-item-price">De: R$417,00</p>
-              <p class="product-item-price-bigger">Por: R$375,00</p>
-              <p class="product-item-price">ou 10x de R$37,50</p>
-              <a href="#" class="product-item-buy-button">Comprar</a>
-            </div>
-          </li>
-
-          <li class="product-item">
-            <img src="https://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="Product Number 0">
-            <div>
-              <h3 class="product-item-name">Product Number 3</h3>
-              <p class="product-item-description">Product long description number 0 just to make more than one like of text.</p>
-              <p class="product-item-price">De: R$417,00</p>
-              <p class="product-item-price-bigger">Por: R$375,00</p>
-              <p class="product-item-price">ou 10x de R$37,50</p>
-              <a href="#" class="product-item-buy-button">Comprar</a>
-            </div>
-          </li>
-
-          <li class="product-item">
-            <img src="https://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6624363" alt="Product Number 0">
-            <div>
-              <h3 class="product-item-name">Product Number 4</h3>
-              <p class="product-item-description">Product long description number 0 just to make more than one like of text.</p>
-              <p class="product-item-price">De: R$417,00</p>
-              <p class="product-item-price-bigger">Por: R$375,00</p>
-              <p class="product-item-price">ou 10x de R$37,50</p>
-              <a href="#" class="product-item-buy-button">Comprar</a>
-            </div>
-          </li>
-
-          <li class="product-item">
-            <img src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6875461" alt="Product Number 0">
-            <div>
-              <h3 class="product-item-name">Product Number 0</h3>
-              <p class="product-item-description">Product long description number 0 just to make more than one like of text.</p>
-              <p class="product-item-price">De: R$417,00</p>
-              <p class="product-item-price-bigger">Por: R$375,00</p>
-              <p class="product-item-price">ou 10x de R$37,50</p>
-              <a href="#" class="product-item-buy-button">Comprar</a>
-            </div>
-          </li>
-
-          <li class="product-item">
-            <img src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="Product Number 0">
-            <div>
-              <h3 class="product-item-name">Product Number 2</h3>
-              <p class="product-item-description">Product long description number 0 just to make more than one like of text.</p>
-              <p class="product-item-price">De: R$417,00</p>
-              <p class="product-item-price-bigger">Por: R$375,00</p>
-              <p class="product-item-price">ou 10x de R$37,50</p>
-              <a href="#" class="product-item-buy-button">Comprar</a>
-            </div>
-          </li>
-
-          <li class="product-item">
-            <img src="https://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6747399" alt="Product Number 0">
-            <div>
-              <h3 class="product-item-name">Product Number 3</h3>
-              <p class="product-item-description">Product long description number 0 just to make more than one like of text.</p>
-              <p class="product-item-price">De: R$417,00</p>
-              <p class="product-item-price-bigger">Por: R$375,00</p>
-              <p class="product-item-price">ou 10x de R$37,50</p>
-              <a href="#" class="product-item-buy-button">Comprar</a>
-            </div>
-          </li>
-
-          <li class="product-item">
-            <img src="https://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6624363" alt="Product Number 0">
-            <div>
-              <h3 class="product-item-name">Product Number 4</h3>
-              <p class="product-item-description">Product long description number 0 just to make more than one like of text.</p>
-              <p class="product-item-price">De: R$417,00</p>
-              <p class="product-item-price-bigger">Por: R$375,00</p>
-              <p class="product-item-price">ou 10x de R$37,50</p>
-              <a href="#" class="product-item-buy-button">Comprar</a>
-            </div>
-          </li>
+          {% endfor %}
         </div>
 
-        <button type="button" class="btn-more-products">Ainda mais produtos aqui!</button>
+        <button type="button" id="more-products" class="btn-more-products">Ainda mais produtos aqui!</button>
 
         <legend class="separation-line">
           <span>Compartilhe a novidade</span>

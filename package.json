@@ -15,6 +15,7 @@
   "license": "MIT",
   "homepage": "https://github.com/davischoll/frontend-dev-challenge-linx#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "nunjucks": "^3.2.3"
   }

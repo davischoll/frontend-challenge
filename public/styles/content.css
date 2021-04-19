@@ -76,6 +76,7 @@
   border: 1px solid var(--color-background-title);
   border-radius: 4px;
   background: var(--color-background-base);
+  cursor: pointer;
 }
 
 .separation-line {
@@ -181,6 +182,7 @@
   margin: 50px;
   color: var(--color-text-base);
   font: normal normal 16px Helvetica;
+  cursor: pointer;
 }
 
 .section-news .section-news-paragraph {
@@ -234,6 +236,7 @@
   height: 39px;
   margin: auto;
   font: normal normal 16px Helvetica;
+  cursor: pointer;
 }
 
 @media (min-width: 700px) {
@@ -309,7 +312,6 @@
   }
 
   .section-news .section-news-form fieldset input{
-    padding: 0 20px 0 20px;
     width: 340px;
   }
 }

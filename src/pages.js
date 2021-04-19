@@ -1,5 +1,8 @@
-const pageLanding = (req, res) => {
-  res.render('home.html')
+const apiProducts = require('../lib/api-products')
+
+const pageLanding = async(req, res) => {
+  const products = await apiProducts.getProducts()
+  res.render('home.html', { products })
 }
 
 const pageMail = (req, res) => {
