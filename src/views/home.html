@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/styles/home.css">
   <link rel="stylesheet" href="/styles/header.css">
   <link rel="stylesheet" href="/styles/content.css">
+  <link rel="stylesheet" href="/styles/footer.css">
 </head>
 
 <body id="page-home">
@@ -37,6 +38,7 @@
 
     <main>
       <section class="main-content">
+
         <article class="description">
           <h1>Ajude o algoritmo a ser mais certeiro</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta
@@ -52,9 +54,9 @@
              nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel
              metus.
           </p>
-
         </article>
-        <form class="description-form" method="POST">
+
+        <form class="description-form" action="#" method="POST">
           <fieldset>
 
             <div class="input-block">
@@ -89,9 +91,7 @@
             </div>
 
             <button type="submit" form="form-enviar">Enviar</button>
-
           </fieldset>
-
         </form>
       </section>
 
@@ -198,16 +198,45 @@
             </div>
           </li>
         </div>
+
+        <button type="button" class="btn-more-products">Ainda mais produtos aqui!</button>
+
+        <legend class="separation-line">
+          <span>Compartilhe a novidade</span>
+        </legend>
       </section>
 
+      <section class="section-news">
+
+        <p class="section-news-paragraph">
+          Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!
+        </p>
+
+        <form class="section-news-form" action="#" method="POST">
+          <fieldset>
+            <div class="input-block">
+              <label for="friends-name">Nome do seu amigo:</label>
+              <input type="text" name="friends-name" id="friends-name" required>
+            </div>
+            <div class="input-block">
+              <label for="friends-mail">E-mail dele:</label>
+              <input type="email" name="friends-mail" id="friends-mail" required>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn-send-friend">Enviar agora</button>
+        </form>
+      </section>
     </main>
 
-    <footer>
+    <footer class="page-footer">
 
+      <div class="footer-bg"></div>
+      <div class="footer-content">
+        <p>Testando suas habilidades em HTML, CSS e JS.</p>
+        <p>Linx Impulse</p>
+        <p>2021</p>
+      </div>
     </footer>
-
   </div>
-
 </body>
-
 </html>
