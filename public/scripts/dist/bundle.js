@@ -884,7 +884,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 }).call(this)}).call(this,require('_process'))
-},{"./adapters/http":2,"./adapters/xhr":2,"./helpers/normalizeHeaderName":24,"./utils":27,"_process":30}],17:[function(require,module,exports){
+},{"./adapters/http":2,"./adapters/xhr":2,"./helpers/normalizeHeaderName":24,"./utils":27,"_process":31}],17:[function(require,module,exports){
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -1614,15 +1614,36 @@ module.exports = {
 }
 
 },{"axios":1}],29:[function(require,module,exports){
-const apiProducts = require('./api-products')
+/**
+ * Formats the price value to the Brazilian
+ * Real currency format with 'R$'
+ * 
+ * @param {float} value - The price value to be formatted
+ * @returns numeric string
+ */
+const formatPriceNumber = value => {
+  return value.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  })
+}
 
-let nrPage = 2
+module.exports = {
+  formatPriceNumber
+}
+
+},{}],30:[function(require,module,exports){
+const apiProducts = require('./api-products')
+const { formatPriceNumber } = require('./formatPrice')
 
 const showMoreProducts = async() => {
-
   const products = await apiProducts.getProducts(nrPage)
 
   products.forEach(product => {
+    let oldPrice = formatPriceNumber(product.oldPrice)
+    let price = formatPriceNumber(product.price)
+    let value = formatPriceNumber(product.installments.value)
+
     const productCard = document.createElement('li')
     productCard.classList.add('product-item')
 
@@ -1631,9 +1652,9 @@ const showMoreProducts = async() => {
     <div>
       <h3 class="product-item-name">${product.name}</h3>
       <p class="product-item-description">${product.description}</p>
-      <p class="product-item-price">De: R$${product.oldPrice}</p>
-      <p class="product-item-price-bigger">Por: R$${product.price}</p>
-      <p class="product-item-price">ou ${product.installments.count}x de R$${product.installments.value}</p>
+      <p class="product-item-price">De: ${oldPrice}</p>
+      <p class="product-item-price-bigger">Por: ${price}</p>
+      <p class="product-item-price">ou ${product.installments.count}x de ${value}</p>
       <a href="#" class="product-item-buy-button">Comprar</a>
     </div>
   `
@@ -1643,8 +1664,14 @@ const showMoreProducts = async() => {
   nrPage++
 }
 
+let nrPage = 1
+
 document.querySelector('#more-products').addEventListener('click', showMoreProducts)
-},{"./api-products":28}],30:[function(require,module,exports){
+
+window.onload = () => {
+  document.querySelector('#more-products').click()
+}
+},{"./api-products":28,"./formatPrice":29}],31:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -1830,4 +1857,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[29]);
+},{}]},{},[30]);

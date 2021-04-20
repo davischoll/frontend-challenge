@@ -2,26 +2,26 @@ const express  = require('express')
 const nunjucks = require('nunjucks')
 const path     = require('path')
 
-const server = express()
-
 const { pageLanding, pageMail } = require(path.join(__dirname, 'src/pages'))
 
+const app = express()
+
 nunjucks.configure('src/views', {
-  express: server,
+  express: app,
   noCache: true
 })
 
-server
-  .use(express.urlencoded({ extended: true }))
-  .set("view engine", "njk")
-  .set('views', path.join(__dirname, 'src/views'))
-  .use(express.static(path.join(__dirname, 'public')))
-  .get('/', pageLanding)
-  .get('/email', pageMail)
-  .listen(3000 || process.env.PORT, err => {
+app.use(express.urlencoded({ extended: true }))
+   .use(express.static(path.join(__dirname, 'public')))
+   .set("view engine", "njk")
+   .set('views', path.join(__dirname, 'src/views'))
+
+app.get('/', pageLanding)
+   .get('/email', pageMail)
+
+app.listen(3000 || process.env.PORT, err => {
     if (err)
       console.log('Could not start the server.')
     else
       console.log('Server is online!')
   })
-  
