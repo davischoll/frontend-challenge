@@ -1,6 +1,9 @@
 const apiProducts = require('./api-products')
 const { formatPriceNumber } = require('./formatPrice')
 
+/**
+ * Create a new product card with the data returned from the Api and add it to the HTML page
+ */
 const showMoreProducts = async() => {
   const products = await apiProducts.getProducts(nrPage)
 
