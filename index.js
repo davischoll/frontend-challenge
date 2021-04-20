@@ -12,6 +12,7 @@ nunjucks.configure('src/views', {
 })
 
 server
+  .use(express.urlencoded({ extended: true }))
   .set("view engine", "njk")
   .set('views', path.join(__dirname, 'src/views'))
   .use(express.static(path.join(__dirname, 'public')))

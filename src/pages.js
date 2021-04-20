@@ -1,7 +1,7 @@
-const apiProducts = require('../lib/api-products')
+const apiProducts = require('../public/scripts/api-products')
 
 const pageLanding = async(req, res) => {
-  const products = await apiProducts.getProducts()
+  const products = await apiProducts.getProducts('1')
   res.render('home.html', { products })
 }
 
