@@ -31,8 +31,6 @@ const showMoreProducts = async() => {
 
 let nrPage = 1
 
-document.querySelector('#more-products').addEventListener('click', showMoreProducts)
+showMoreProducts()
 
-window.onload = () => {
-  document.querySelector('#more-products').click()
-}
+document.querySelector('#more-products').addEventListener('click', showMoreProducts)

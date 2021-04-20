@@ -1666,11 +1666,9 @@ const showMoreProducts = async() => {
 
 let nrPage = 1
 
-document.querySelector('#more-products').addEventListener('click', showMoreProducts)
+showMoreProducts()
 
-window.onload = () => {
-  document.querySelector('#more-products').click()
-}
+document.querySelector('#more-products').addEventListener('click', showMoreProducts)
 },{"./api-products":28,"./formatPrice":29}],31:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};

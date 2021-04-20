@@ -11,6 +11,18 @@
   font-size: 20px;
 }
 
+#arrow-top {
+  position: absolute;
+  padding: 7px;
+  box-shadow: 1px -1px 0 0px var(--color-background-title) inset;
+  border: solid transparent;
+  border-width: 0 0 1px 1px;
+  transform: rotate(135deg);
+
+  margin-left: 35px;
+  margin-top: 10px;
+}
+
 .main-content .description p {
   margin-bottom: 20px;
   font-style: normal;
@@ -258,6 +270,10 @@
     font-size: 22px;
   }
 
+  #arrow-top {
+    display: none;
+  }
+
   .main-content .description p {
     font-size: 14px;
   }
@@ -292,7 +308,7 @@
     width: 170px;
   }
 
-  .separation-line{
+  .separation-line {
     width: 768px;
   }
 
@@ -307,12 +323,20 @@
     align-items: center;
   }
 
-  .section-news .section-news-form fieldset .input-block{
+  .section-news .section-news-form fieldset .input-block {
     padding: 0 20px 0 20px;
   }
 
-  .section-news .section-news-form fieldset input{
+  .section-news .section-news-form fieldset label {
+    font-size: 14px;
+  }
+
+  .section-news .section-news-form fieldset input {
     width: 340px;
+  }
+
+  .section-news .section-news-form .his-mail {
+    display: none;
   }
 }
 
@@ -336,16 +360,16 @@
     height: 150px;
   }
 
-  .product-list .product-item .product-item-name{
+  .product-list .product-item .product-item-name {
     font-size: 16px;
     margin: 10px 0 14px 0;
   }
 
-  .product-list .product-item .product-item-price{
+  .product-list .product-item .product-item-price {
     font-size: 14px;
   }
 
-  .product-list .product-item .product-item-price-bigger{
+  .product-list .product-item .product-item-price-bigger {
     font-size: 16px;
   }
 
@@ -361,13 +385,35 @@
     margin-bottom: 14px;
   }
 
-  .separation-line{
+  .separation-line {
     width: 980px;
   }
 }
 
 @media (max-width: 400px) {
-  .separation-line{
+  .separation-line {
     width: 320px;
+  }
+
+  #arrow-top {
+    margin-left: 5px;
+  }
+
+  .product-item-buy-button {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 370px) {
+  .page-header .header-content .main-menu {
+    gap: 5px;
+  }
+
+  .main-menu-item {
+    max-width: 140px;
+  }
+ 
+  .product-item-buy-button {
+    max-width: 130px;
   }
 }
