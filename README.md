@@ -27,7 +27,7 @@ Ao obter os dados os seguintes pontos são implementados:
 Para rodar a aplicação na máquina com um servidor local, é necessário o NodeJS e NPM.
 
 ```
-$ git clone https://github.com/davischoll/davi-cv.git
+$ git clone https://github.com/davischoll/frontend-dev-challenge-linx.git
 $ npm install
 $ npm run dev
 ```
