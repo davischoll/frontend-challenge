@@ -6,16 +6,72 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Desafio Linx | Página E-mail</title>
+  <title>Desafio Linx | Página Email</title>
 
-  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/mail.css">
 </head>
 
-<body>
-  <h2>Desafio Linx | Página do Email</h2>
+<body id="page-mail">
 
-  <!-- Conteúdo página do email... -->
+  <div id="container">
+  
+    <header class="header">
+      <div class="header-bg"></div>
+      <div class="header-title">
+        <p>uma seleção de produtos</p>
+        <strong>especial para você</strong>
+        <p>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
+      </div>
+    </header>
 
+    <main>
+      
+      <section class="section-products">
+        <div class="title-paragraph">
+          <h1>Olá, Fulano</h1>
+          <p>Fizemos uma lista especial de produtos apenas para você. Isso mesmo: nesta lista temos só produtos
+            que você pode gostar. Seu amigo Ciclano lhe recomendou essa lista especial. Olha só:
+          </p>
+        </div>
+
+        <div class="product-list" id="product-list">
+          <li class="product-item">
+            <img src="https://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6829158" alt="${product.name}">
+            <div>
+              <h3 class="product-item-name">Produto 3</h3>
+              <p class="product-item-description">Product long description number 3 just to make more than one like of text.</p>
+              <p class="product-item-price">De: R$23,99</p>
+              <p class="product-item-price-bigger">Por: R$19,99</p>
+              <p class="product-item-price">ou 2x de R$9,98</p>
+              <a href="#" class="product-item-buy-button">Comprar</a>
+            </div>
+          </li>
+          <li class="product-item">
+            <img src="https://imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6829158" alt="${product.name}">
+            <div>
+              <h3 class="product-item-name">Produto 3</h3>
+              <p class="product-item-description">Product long description number 3 just to make more than one like of text.</p>
+              <p class="product-item-price">De: R$23,99</p>
+              <p class="product-item-price-bigger">Por: R$19,99</p>
+              <p class="product-item-price">ou 2x de R$9,98</p>
+              <a href="#" class="product-item-buy-button">Comprar</a>
+            </div>
+          </li>
+        </div>
+
+        <button type="button" id="more-products" class="btn-more-products">Tem muito mais aqui. Vem ver!</button>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+
+      <div class="footer-bg"></div>
+      <div class="footer-content">
+        <p>Testando suas habilidades em HTML, CSS e JS.</p>
+        <p>Linx Impulse</p>
+        <p>2021</p>
+      </div>
+    </footer>
+  </div>
 </body>
-
 </html>
