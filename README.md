@@ -1,6 +1,6 @@
-# Desafio | Frontend Developer
+# Desafio | Frontend
 
-Projeto construído como desafio para processo de seleção da [Linx Impulse](https://www.linx.com.br/). Desenvolvimento de uma landing page com uma grade de produtos + form e uma página de e-mail (Newsletter).
+Projeto construído como desafio para prática de Front-end (Javascript + HTML + CSS). Desenvolvimento de uma landing page com uma grade de produtos + form e uma página de e-mail (Newsletter).
 
 ## Preview
 
